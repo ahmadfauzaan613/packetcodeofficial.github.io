@@ -1,0 +1,3076 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// Start-Index
+
+// Navbar
+.navbar {
+    .navbar-nav {
+        .nav-item {
+            a {
+
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: normal;
+                font-size: 17px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+                &:hover {
+                    color: #04933c;
+                }
+            }
+
+        }
+    }
+}
+
+// Navbar
+
+// MobileNav
+.page {
+
+
+    header {
+        display: flex;
+        position: sticky;
+        width: 100%;
+        height: 70px;
+        margin: 0;
+        z-index: 1;
+        background: #ffffff;
+        color: rgb(0, 0, 0);
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    #nav-container {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;
+    }
+
+    #nav-container .bg {
+        position: relative;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        transition: .3s;
+        background: #000;
+    }
+
+    #nav-container:focus-within .bg {
+        visibility: visible;
+        opacity: .6;
+        z-index: 1;
+    }
+
+    #nav-container * {
+        visibility: visible;
+        z-index: 1;
+    }
+
+    .button {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 0;
+        -webkit-appearance: none;
+        border: 0;
+        background: transparent;
+        border-radius: 0;
+        height: 70px;
+        width: 30px;
+        cursor: pointer;
+        pointer-events: auto;
+        margin-left: 25px;
+        margin-top: -65px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .icon-bar {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: rgb(0, 0, 0);
+        transition: .3s;
+    }
+
+    .icon-bar+.icon-bar {
+        margin-top: 5px;
+    }
+
+    #nav-container:focus-within .button {
+        pointer-events: none;
+    }
+
+    #nav-container:focus-within .icon-bar:nth-of-type(1) {
+        transform: translate3d(0, 8px, 0) rotate(45deg);
+    }
+
+    #nav-container:focus-within .icon-bar:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    #nav-container:focus-within .icon-bar:nth-of-type(3) {
+        transform: translate3d(0, -8px, 0) rotate(-45deg);
+    }
+
+    #nav-content {
+        padding: 20px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        pointer-events: auto;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        transform: translateX(-100%);
+        transition: transform .3s;
+        will-change: transform;
+        contain: paint;
+    }
+
+    #nav-content ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #nav-content li a {
+        padding: 10px 5px;
+        display: block;
+        text-transform: uppercase;
+        transition: color .1s;
+    }
+
+    #nav-content li a:hover {
+        color: #04933c;
+    }
+
+    #nav-content li:not(.small)+.small {
+        margin-top: auto;
+    }
+
+    .small {
+        display: flex;
+        align-self: center;
+    }
+
+    .small a {
+        font-size: 12px;
+        font-weight: 400;
+        color: #888;
+    }
+
+    .small a+a {
+        margin-left: 15px;
+    }
+
+    #nav-container:focus-within #nav-content {
+        transform: none;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    a,
+    a:visited,
+    a:focus,
+    a:active,
+    a:link {
+        text-decoration: none;
+        outline: 0;
+    }
+
+    a {
+        color: currentColor;
+        transition: .2s ease-in-out;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0;
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    img {
+        vertical-align: middle;
+        height: auto;
+        width: 56px;
+    }
+}
+
+// MobileNav
+
+
+
+
+// carousel
+.carousel {
+    z-index: 0;
+
+    .carousel-inner {
+
+        .carousel-item {
+            max-height: 750px;
+            background-size: 100%;
+        }
+    }
+
+    .carousel-caption {
+        h5 {
+
+            text-align: center;
+            padding-top: 15px;
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-size: 36px;
+        }
+    }
+}
+
+// carousel
+
+// Card
+.our-mision {
+    margin-top: 50px;
+
+    h2 {
+        text-align: center;
+        padding-top: 15px;
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        font-size: 45px;
+    }
+
+    p {
+        text-align: center;
+        padding-top: 5px;
+
+        @font-face {
+            font-family: regular;
+            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+        }
+
+        font-size: 18px;
+        font-weight: 350;
+    }
+
+    .item {
+        padding-bottom: 20px;
+
+        .box {
+
+            text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(3, 3, 3, 0.75);
+            transition: opacity 0.15s ease-in;
+            opacity: 0;
+            padding-top: 80px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+
+            &:hover {
+                opacity: 2;
+            }
+
+            .name {
+                padding-top: 30px;
+
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: bold;
+                font-size: 24px;
+            }
+
+            .title {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: normal;
+                color: #ffffff;
+                font-size: 13px;
+            }
+        }
+    }
+
+}
+
+// Card
+
+// recent-updates
+.recent-updates {
+    h2 {
+        text-align: center;
+        padding-top: 50px;
+        margin-bottom: 50px;
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        font-size: 36px;
+
+    }
+
+    .card-recentupdates {
+        h4 {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: 10px;
+
+
+        }
+
+        h3 {
+            @font-face {
+                font-family: fontku;
+                src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+            }
+
+            font-size: 21px;
+
+            &:hover {
+                color: #04933c;
+            }
+
+        }
+
+        p {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+
+    img {
+        &:hover {
+            transform: scale(1.1);
+            transition: transform .2s ease;
+        }
+    }
+
+    .btn-viewmore {
+        h4 {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+
+}
+
+// recent-updates
+
+
+// footer-contact
+.footer-contact {
+    margin-top: 180px;
+
+    .kultura {
+        margin-left: -22px;
+    }
+
+    .col {
+        ul {
+            margin-top: 11px;
+        }
+    }
+
+    h5 {
+        @font-face {
+            font-family: regular;
+            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+        }
+
+        color: rgb(92, 92, 92);
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    li {
+        a {
+            text-decoration: none;
+
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: normal;
+            font-size: 14px;
+            color: #000;
+        }
+
+        &:hover a {
+            color: #04933c;
+        }
+    }
+
+    p {
+        @font-face {
+            font-family: regular;
+            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+        }
+
+        font-size: 12px;
+        font-weight: 200;
+    }
+}
+
+// footer-contact
+
+
+// Footer
+footer {
+    h4 {
+        margin-top: 100px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 12px;
+
+    }
+}
+
+// Footer
+
+// End-Index
+
+
+// About pages
+.nav {
+    li {
+        a {
+            text-decoration: none;
+
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: normal;
+            font-size: 16px;
+            margin-right:10px;
+            color: #000;
+
+            &:hover {
+                color: #04933c !important;
+                text-decoration: underline #04933c 3px !important;
+            }
+
+            &:active {
+                color: #04933c !important;
+            }
+        }
+    }
+
+}
+
+.judul {
+    background-image: url("../Images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg");
+    background-size: 100%;
+    padding-bottom: 8%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    background-color: rgb(192, 192, 192);
+
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: #fff;
+        font-size: 70px;
+        padding-top: 150px;
+        text-align: center;
+    }
+}
+
+.text {
+    h2 {
+        @font-face {
+            font-family: regular;
+            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+        }
+
+        margin-bottom:80px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 42px;
+    }
+
+
+    h3 {
+        @font-face {
+            font-family: regular;
+            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+        }
+
+        margin-bottom: 25px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    p {
+        @font-face {
+            font-family: regular;
+            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+        }
+
+        text-align: start;
+        margin-bottom: 80px;
+        font-weight: normal;
+        font-size: 20px;
+        color: rgb(131, 131, 131);
+    }
+
+}
+
+.text2 {
+    .row {
+        h4 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-size: 20px;
+            text-align: center;
+            background-color: #04933c;
+            padding: 15px;
+            color: rgb(255, 255, 255);
+            border-radius: 5px;
+        }
+
+        p {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-size: 16px;
+
+            text-align: start;
+            margin-top: 20px;
+        }
+    }
+}
+
+// leadership
+.judul2 {
+    background-image: url("../Images/anete-lusina-zwsHjakE_iI-unsplash.jpg");
+    background-size: 100%;
+    padding-bottom: 8%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 30px;
+    background-color: rgb(192, 192, 192);
+
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: #fff;
+        font-size: 66px;
+        padding-top: 150px;
+        text-align: center;
+    }
+}
+
+.foto {
+    margin-top: 40px;
+
+    .row {
+        img {
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .2s ease;
+            }
+        }
+
+        h3 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-size: 24px;
+            margin-top: 25px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+        }
+
+        p {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-size: 18px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// About pages
+
+// Investor-Overview
+.company {
+    margin-top: 80px;
+
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 28px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        margin-top: 10px;
+
+    }
+
+}
+
+.money {
+    margin-top: 100px;
+
+    h3 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        margin-top: 10px;
+
+    }
+
+    p {
+        margin-top: 10px;
+    }
+}
+
+.money2 {
+    background-color: rgb(238, 235, 235);
+
+    p {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        color: rgb(134, 134, 134);
+        font-size: 16px;
+
+
+    }
+
+    h3 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 42px;
+
+    }
+}
+
+.quarterly {
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 32px;
+    }
+
+    .quaterlyresult {
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: #04933c;
+            font-size: 62px;
+        }
+
+        h5 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+        }
+    }
+
+    .infoquaterly {
+        margin-top: 20px;
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+        }
+
+        h5 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            display: inline-block;
+            padding-right: 60px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+    }
+
+    // .q1 {
+    //     h1 {
+    //         @font-face {
+    //             font-family: semibold;
+    //             src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+    //         }
+
+    //         color: #04933c;
+    //         font-size: 20px;
+    //     }
+
+    //     h2 {
+    //         @font-face {
+    //             font-family: semibold;
+    //             src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+    //         }
+
+    //         font-size: 10px;
+
+    //     }
+    // }
+
+    // .march {
+    //     h1 {
+    //         @font-face {
+    //             font-family: semibold;
+    //             src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+    //         }
+
+    //         color: #000;
+    //         font-size: 15px;
+    //     }
+
+    // .nav {
+    //     .nav-item {
+
+
+    //         a {
+    //             @font-face {
+    //                 font-family: semibold;
+    //                 src: url('../font/hurmegeometricsans1_black-demo.html');
+    //             }
+
+    //             font-weight: normal;
+    //             color: #04933c;
+    //             font-size: 18px;
+    //         }
+    //     }
+    // }
+
+
+}
+
+.news {
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+
+    .card-recentupdates {
+        padding-top: 20px;
+
+        h4 {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: 10px;
+
+
+        }
+
+        h3 {
+            @font-face {
+                font-family: fontku;
+                src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+            }
+
+            font-size: 21px;
+
+            &:hover {
+                color: #04933c;
+            }
+
+        }
+
+        p {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: normal;
+            font-size: 15px;
+        }
+
+        .btn {
+
+            h4 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
+
+.annual-reports {
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+    .btn-annual {
+        margin-top: 70px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+// Investor-quarterly
+.nav-result {
+    margin-top: 35px;
+
+    .nav {
+        .nav-item {
+            .nav-link {
+                h3 {
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_black-demo.html');
+                    }
+
+                    font-size: 30px;
+
+
+                }
+
+                &:hover {
+                    text-decoration: none !important;
+                }
+            }
+        }
+    }
+}
+
+.btn-annual {
+    h3 {
+        @font-face {
+            font-family: fontku;
+            src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+        }
+
+        font-size: 24px;
+        padding-bottom: 18px;
+        padding-top: 10px;
+    }
+}
+
+.corporate {
+    margin-top: 40px;
+
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 30px;
+        margin-top: 60px;
+    }
+
+    .btn {
+        margin-top: 50px;
+        height: 85px;
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        color: rgb(54, 54, 54);
+        font-size: 18px;
+    }
+
+    .email-alert {
+        p {
+            @font-face {
+                font-family: fontku;
+                src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+            }
+
+            font-size: 18px;
+            margin-top: 120px;
+            margin-bottom: 122px;
+        }
+    }
+
+
+}
+
+.quarterly {
+    h1 {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+        }
+
+        color: rgb(0, 0, 0);
+        font-size: 38px;
+        margin-top: 20px;
+    }
+
+    .quaterlyresult {
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: #04933c;
+            font-size: 62px;
+        }
+
+        h5 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            font-weight: normal;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+        }
+    }
+
+    .infoquaterly {
+        margin-top: 20px;
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+        }
+
+        h5 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            display: inline-block;
+            padding-right: 40px;
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+        }
+    }
+
+}
+
+// Newsroom
+#newsroom {
+    margin-top: -300px;
+
+    h5 {
+        margin-top: 80px;
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        font-weight: normal;
+        color: #808080;
+        font-size: 14px;
+    }
+}
+
+.sidebar {
+    margin-top: 55px;
+
+    ul {
+        ol {
+            #allnews {
+                h4 {
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_black-demo.html');
+                    }
+
+                    font-weight: normal;
+                    color: #04933c;
+                    font-size: 18px;
+                    text-decoration: none;
+
+                }
+
+
+            }
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_black-demo.html');
+                }
+
+                font-weight: normal;
+                color: #000000;
+                font-size: 22px;
+                padding-bottom: 5px;
+                padding-top: 10px;
+            }
+
+            a {
+                p {
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_black-demo.html');
+                    }
+
+                    font-weight: normal;
+                    color: #363636;
+                    font-size: 16px;
+
+                }
+            }
+
+
+
+
+        }
+
+    }
+
+}
+
+// annual-reports
+.annual-reports {
+    p {
+        margin-top: 80px;
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        font-weight: normal;
+        color: #808080;
+        font-size: 14px;
+    }
+}
+
+// About pages - End
+
+// Media
+
+.media-updates {
+    margin-top: -200px !important;
+
+    .card-media {
+        h4 {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: 10px;
+
+
+        }
+
+        h3 {
+            @font-face {
+                font-family: fontku;
+                src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+            }
+
+            font-size: 21px;
+
+            &:hover {
+                color: #04933c;
+            }
+
+        }
+
+        p {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-weight: 300;
+            font-size: 15px;
+        }
+    }
+
+    img {
+        &:hover {
+            transform: scale(1.1);
+            transition: transform .2s ease;
+        }
+    }
+
+    .btn-viewmore {
+        h4 {
+            @font-face {
+                font-family: regular;
+                src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+            }
+
+            font-size: 18px;
+            font-weight: 400;
+        }
+    }
+}
+
+.card-media {
+    a {
+
+        .logo {
+            background-image: url('../images/WhatsApp_Image_2021-06-04_at_19.15.20-removebg-preview.png');
+            height: 300px;
+            background-position: 50%;
+            background-size: cover;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+            background-color: #e6e6e6;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .2s ease;
+            }
+
+        }
+
+        .office {
+            background-image: url('../images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg');
+            height: 300px;
+            background-size: cover;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .2s ease;
+            }
+        }
+
+        h5 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 30px;
+
+        }
+
+        text-decoration: none;
+    }
+}
+
+.link-media {
+    margin-top: 50px;
+
+    ul {
+        lo {
+            a {
+
+                p {
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_black-demo.html');
+                    }
+
+                    font-size: 16px;
+                    color: #04933c;
+
+                }
+
+                &:hover {
+                    text-decoration: none !important;
+                    color: #010c05 !important;
+                }
+            }
+        }
+    }
+}
+
+.logo-media {
+    a {
+        text-decoration: none;
+
+        h5 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: #04933c;
+
+            &:hover {
+                text-decoration: none !important;
+            }
+
+        }
+
+
+        .kultura-logo {
+            background-image: url('../images/WhatsApp_Image_2021-06-04_at_19.15.20-removebg-preview.png');
+            height: 300px;
+            background-position: 50%;
+            background-size: cover;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        .garena-logo {
+            background-image: url('../images/Pendanaan-Garena-Seri-D-Featured.jpg');
+            height: 300px;
+            background-position: 50%;
+            background-size: cover;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        .shopee-logo {
+            background-image: url('../images/shopee-logo-0.png');
+            height: 300px;
+            background-position: 50%;
+            background-size: cover;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .seamoney-logo {
+            background-image: url('../images/SeaMoney\ Vertical.png');
+            height: 300px;
+            background-position: 50%;
+            background-size: cover;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+        }
+
+        .kultura-office {
+            background-image: url('../images/pexels-cadeau-maestro-1170412.jpg');
+            height: 300px;
+            background-position: 50%;
+            background-size: cover;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 0;
+
+
+        }
+    }
+
+}
+
+// Media-end
+
+// sustainaability
+.commitment {
+    h1 {
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 60px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 28px;
+    }
+
+    p {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 50px;
+        text-align: start;
+        font-weight: 400;
+        color: #808080;
+        font-size: 16px;
+    }
+}
+
+.impact {
+    h1 {
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 60px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 28px;
+    }
+}
+
+.social {
+    h1 {
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 60px;
+        margin-bottom:60px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 28px;
+    }
+}
+
+// Careeer
+.training {
+    h1 {
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 60px;
+        margin-bottom: 60px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+    }
+
+}
+
+.onboard {
+    text-align: center;
+
+    h1 {
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 200px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+    }
+
+    .btn {
+        margin-top: 50px;
+        border-radius: 80px;
+        width: 200px;
+        height: 45px;
+
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
+// Contacts
+.contact {
+    margin-top: 50px;
+
+    p {
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        text-align: start;
+        font-weight: 400;
+        color: #808080;
+        font-size: 17px;
+    }
+}
+
+.message {
+    h1 {
+
+        @font-face {
+            font-family: semibold;
+            src: url('../font/hurmegeometricsans1_black-demo.html');
+        }
+
+        margin-top: 60px;
+        margin-bottom: 50px;
+        text-align: start;
+        font-weight: normal;
+        font-size: 28px;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+    body {
+        .navbar {
+            img {
+                width: 64px;
+            }
+
+            .navbar-nav {
+                .nav-item {
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-weight: normal;
+                    font-size: 15px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+
+                    &:hover a {
+                        color: #04933c;
+                    }
+
+                    &:visited a {
+                        color: #04933c;
+                    }
+
+
+                }
+            }
+        }
+
+        .carousel {
+            .carousel-inner {
+
+                .carousel-item {
+                    max-height: 750px;
+
+                    .carousel-caption {
+                        h5 {
+                            @font-face {
+                                font-family: semibold;
+                                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                            }
+
+                            font-size: 16px;
+                        }
+
+                        p {
+
+                            @font-face {
+                                font-family: semibold;
+                                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                            }
+
+                            font-size: 12px;
+
+                        }
+                    }
+                }
+            }
+
+            .carousel-caption {
+                h5 {
+
+                    text-align: center;
+                    padding-top: 15px;
+
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                    }
+
+                    font-size: 36px;
+                }
+            }
+        }
+
+        .body {
+            margin-top: 50px;
+
+            h2 {
+                text-align: center;
+                padding-top: 8px;
+
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                font-size: 28px;
+            }
+
+            p {
+                text-align: center;
+                padding-top: 5px;
+
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-size: 14px;
+                font-weight: 350;
+            }
+
+            .item {
+                padding-top: 20px;
+
+                .box {
+                    text-align: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    height: 280px;
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .cover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(3, 3, 3, 0.75);
+                    transition: opacity 0.15s ease-in;
+                    opacity: 0;
+                    padding-top: 80px;
+                    color: #fff;
+                    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+
+                    &:hover {
+                        opacity: 2;
+                    }
+
+                    .name {
+                        @font-face {
+                            font-family: regular;
+                            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                        }
+
+                        font-weight: bold;
+                        font-size: 24px;
+                    }
+
+                    .title {
+                        @font-face {
+                            font-family: regular;
+                            src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                        }
+
+                        font-weight: normal;
+                        color: #ffffff;
+                        font-size: 13px;
+                    }
+                }
+            }
+
+        }
+
+        .body2 {
+            h2 {
+                text-align: center;
+                padding-top: 50px;
+                margin-bottom: 50px;
+
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                font-size: 28px;
+
+            }
+
+            .recentupdates {
+                h4 {
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-weight: 400;
+                    font-size: 12px;
+                    margin-top: 10px;
+
+
+                }
+
+                h3 {
+                    @font-face {
+                        font-family: fontku;
+                        src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+                    }
+
+                    font-size: 21px;
+
+                    &:hover {
+                        color: #04933c;
+                    }
+
+                }
+
+                p {
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-weight: 300;
+                    font-size: 15px;
+                }
+            }
+
+            img {
+                &:hover {
+                    transform: scale(1.1);
+                    transition: transform .4s ease;
+                }
+            }
+
+            .btn {
+                h4 {
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+
+        }
+
+        // About-Our Values
+        .nav {
+            li {
+                a {
+                    text-decoration: none;
+
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-weight: normal;
+                    font-size: 16px;
+                    margin-right:10px;
+                    color: #000;
+
+                    &:hover {
+                        color: #04933c !important;
+                        text-decoration: underline #04933c 3px !important;
+                    }
+
+                    &:active,
+                    :visited {
+                        color: #04933c !important;
+                        text-decoration: underline #04933c 3px !important;
+                    }
+                }
+            }
+
+        }
+
+        .judul {
+            background-image: url("../Images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg");
+            background-size: 100%;
+            padding-bottom: 8%;
+            background-size: cover;
+            background-attachment: fixed;
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-top: 30px;
+            background-color: rgb(192, 192, 192);
+
+            h1 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                color: #fff;
+                font-size: 48px;
+                padding-top: 100px;
+                text-align: center;
+            }
+        }
+
+        .text {
+            h2 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                margin-bottom: 32px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 36px;
+            }
+
+            h3 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                margin-top: 50px;
+                margin-bottom: 25px;
+                text-align: center;
+                font-weight: 500;
+                font-size: 24px;
+            }
+
+            p {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                text-align: start;
+                font-weight: lighter;
+                font-size: 18px;
+                color: rgb(131, 131, 131);
+            }
+        }
+
+        .text2 {
+            .row {
+
+                h4,
+                p {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+    .judul {
+        background-image: url("../Images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg");
+        background-size: 100%;
+        padding-bottom: 8%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 30px;
+        background-color: rgb(192, 192, 192);
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: #fff;
+            font-size: 28px;
+            padding-top: 150px;
+            text-align: center;
+        }
+    }
+
+    .judul2 {
+        background-image: url("../Images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg");
+        background-size: 100%;
+        padding-bottom: 8%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 30px;
+        background-color: rgb(192, 192, 192);
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: #fff;
+            font-size: 45px;
+            padding-top: 150px;
+            text-align: center;
+        }
+    }
+
+    // About pages
+
+    // Investor-Overview
+    .company {
+        margin-top: 20px;
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            margin-top: 10px;
+
+        }
+
+    }
+
+    .money {
+        margin-top: 20px;
+
+        h3 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            margin-top: 10px;
+
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    }
+
+    .money2 {
+        background-color: rgb(238, 235, 235);
+
+        p {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: rgb(134, 134, 134);
+            font-size: 16px;
+
+
+        }
+
+        h3 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 42px;
+
+        }
+    }
+
+
+    .news {
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            margin-top: 50px;
+        }
+
+
+        .card-recentupdates {
+            padding-top: 20px;
+
+            h4 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: 400;
+                font-size: 12px;
+                margin-top: 10px;
+
+
+            }
+
+            h3 {
+                @font-face {
+                    font-family: fontku;
+                    src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+                }
+
+                font-size: 21px;
+
+                &:hover {
+                    color: #04933c;
+                }
+
+            }
+
+            p {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: normal;
+                font-size: 15px;
+            }
+
+            .btn {
+
+                h4 {
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+    }
+
+    .annual-reports {
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            margin-top: 60px;
+        }
+
+        .btn-annual {
+            margin-top: 70px;
+        }
+    }
+
+    // Investor-quarterly
+    .nav-result {
+        margin-top: 35px;
+
+        .nav {
+            .nav-item {
+                .nav-link {
+                    h3 {
+                        @font-face {
+                            font-family: semibold;
+                            src: url('../font/hurmegeometricsans1_black-demo.html');
+                        }
+
+                        font-size: 30px;
+
+
+                    }
+
+                    &:hover {
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-annual {
+        h3 {
+            @font-face {
+                font-family: fontku;
+                src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+            }
+
+            font-size: 24px;
+            padding-bottom: 18px;
+            padding-top: 10px;
+        }
+    }
+
+    .corporate {
+        margin-top: 40px;
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            margin-top: 60px;
+        }
+
+        .btn {
+            margin-top: 50px;
+            height: 85px;
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: rgb(54, 54, 54);
+            font-size: 18px;
+        }
+
+        .email-alert {
+            p {
+                @font-face {
+                    font-family: fontku;
+                    src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+                }
+
+                font-size: 18px;
+                margin-top: 120px;
+                margin-bottom: 122px;
+            }
+        }
+
+
+    }
+
+    .quarterly {
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        .quaterlyresult {
+
+            h1 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                color: #04933c;
+                font-size: 62px;
+            }
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                font-weight: normal;
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+            }
+        }
+
+        .infoquaterly {
+            margin-top: 20px;
+
+            h1 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                color: rgb(0, 0, 0);
+                font-size: 20px;
+            }
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                display: inline-block;
+                padding-right: 60px;
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                padding-top: 10px;
+            }
+        }
+
+    }
+
+    // Newsroom
+    #newsroom {
+        margin-top: -300px;
+
+        h5 {
+            margin-top: 80px;
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            font-weight: normal;
+            color: #808080;
+            font-size: 14px;
+        }
+    }
+
+    .sidebar {
+        margin-top: 55px;
+
+        ul {
+            ol {
+                #allnews {
+                    h4 {
+                        @font-face {
+                            font-family: semibold;
+                            src: url('../font/hurmegeometricsans1_black-demo.html');
+                        }
+
+                        font-weight: normal;
+                        color: #04933c;
+                        font-size: 18px;
+                        text-decoration: none;
+
+                    }
+
+
+                }
+
+                h5 {
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_black-demo.html');
+                    }
+
+                    font-weight: normal;
+                    color: #000000;
+                    font-size: 22px;
+                    padding-bottom: 5px;
+                    padding-top: 10px;
+                }
+
+                a {
+                    p {
+                        @font-face {
+                            font-family: semibold;
+                            src: url('../font/hurmegeometricsans1_black-demo.html');
+                        }
+
+                        font-weight: normal;
+                        color: #363636;
+                        font-size: 16px;
+
+                    }
+                }
+
+
+
+
+            }
+
+        }
+
+    }
+
+    // annual-reports
+    .annual-reports {
+        p {
+            margin-top: 80px;
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            font-weight: normal;
+            color: #808080;
+            font-size: 14px;
+        }
+    }
+
+    // Investor-quarterly
+    .nav-result {
+        margin-top: 35px;
+        display: inline-block;
+
+        .nav {
+
+            .nav-item {
+                display: inline-block;
+
+                .nav-link {
+
+
+                    h3 {
+                        @font-face {
+                            font-family: semibold;
+                            src: url('../font/hurmegeometricsans1_black-demo.html');
+                        }
+
+                        font-size: 18px;
+
+
+                    }
+
+                    &:hover {
+                        text-decoration: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-annual {
+        h3 {
+            @font-face {
+                font-family: fontku;
+                src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+            }
+
+            font-size: 24px;
+            padding-bottom: 18px;
+            padding-top: 10px;
+        }
+    }
+
+    .corporate {
+        margin-top: 40px;
+
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            margin-top: 60px;
+        }
+
+        .btn {
+            margin-top: 50px;
+            height: 85px;
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            color: rgb(54, 54, 54);
+            font-size: 18px;
+        }
+
+        .email-alert {
+            p {
+                @font-face {
+                    font-family: fontku;
+                    src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+                }
+
+                font-size: 18px;
+                margin-top: 120px;
+                margin-bottom: 122px;
+            }
+        }
+
+        h3 {
+            margin-top: 30px;
+            text-align: start;
+            font-size: 20px;
+        }
+
+    }
+
+    .quarterly {
+        h1 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+            }
+
+            color: rgb(0, 0, 0);
+            font-size: 38px;
+            margin-top: 20px;
+        }
+
+        .quaterlyresult {
+
+            h1 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                color: #04933c;
+                font-size: 62px;
+            }
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                font-weight: normal;
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+            }
+        }
+
+        .infoquaterly {
+            margin-top: 20px;
+
+            h1 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                color: rgb(0, 0, 0);
+                font-size: 28px;
+            }
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_semibold-webfont.woff2');
+                }
+
+                display: inline-block;
+                padding-right: 40px;
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+            }
+        }
+
+    }
+
+    // Newsroom
+    #newsroom {
+        margin-top: 20px;
+
+        h5 {
+            margin-top: 80px;
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            font-weight: normal;
+            color: #808080;
+            font-size: 14px;
+        }
+    }
+
+    // Media
+
+    .media-updates {
+
+        .card-media {
+            margin-top: 250px;
+
+            h4 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: 400;
+                font-size: 12px;
+                margin-top: 10px;
+
+
+            }
+
+            h3 {
+                @font-face {
+                    font-family: fontku;
+                    src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+                }
+
+                font-size: 21px;
+
+                &:hover {
+                    color: #04933c;
+                }
+
+            }
+
+            p {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: 300;
+                font-size: 15px;
+            }
+        }
+
+        img {
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .2s ease;
+            }
+        }
+
+        .btn-viewmore {
+            h4 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .media-library {
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .card-media {
+        a {
+
+            .logo {
+                background-image: url('../images/WhatsApp_Image_2021-06-04_at_19.15.20-removebg-preview.png');
+                height: 300px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+                background-color: #e6e6e6;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: transform .2s ease;
+                }
+
+            }
+
+            .office {
+                background-image: url('../images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg');
+                height: 300px;
+                background-size: cover;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+                margin-top: 20px;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: transform .2s ease;
+                }
+
+                h5 {
+                    @font-face {
+                        font-family: semibold;
+                        src: url('../font/hurmegeometricsans1_black-demo.html');
+                    }
+                }
+
+                text-decoration: none;
+            }
+
+        }
+    }
+
+    .link-media {
+        margin-top: 50px;
+
+        ul {
+            lo {
+                a {
+
+                    p {
+                        @font-face {
+                            font-family: semibold;
+                            src: url('../font/hurmegeometricsans1_black-demo.html');
+                        }
+
+                        font-size: 16px;
+                        color: #04933c;
+
+                    }
+
+                    &:hover {
+                        text-decoration: none !important;
+                        color: #010c05 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo-media {
+        a {
+            text-decoration: none;
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_black-demo.html');
+                }
+
+                color: #04933c;
+
+                &:hover {
+                    text-decoration: none !important;
+                }
+
+            }
+
+
+            .kultura-logo {
+                background-image: url('../images/WhatsApp_Image_2021-06-04_at_19.15.20-removebg-preview.png');
+                height: 300px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .garena-logo {
+                background-image: url('../images/Pendanaan-Garena-Seri-D-Featured.jpg');
+                height: 300px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+
+
+            }
+
+            .shopee-logo {
+                background-image: url('../images/shopee-logo-0.png');
+                height: 300px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+            }
+
+            .seamoney-logo {
+                background-image: url('../images/SeaMoney\ Vertical.png');
+                height: 300px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+            }
+
+            .kultura-office {
+                background-image: url('../images/pexels-cadeau-maestro-1170412.jpg');
+                height: 300px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+
+
+            }
+        }
+
+    }
+
+    // Media-end
+
+    // sustainaability
+    .commitment {
+        h1 {
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 60px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 28px;
+        }
+
+        p {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 50px;
+            text-align: start;
+            font-weight: 400;
+            color: #808080;
+            font-size: 16px;
+        }
+    }
+
+    .impact {
+        h1 {
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 60px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 28px;
+        }
+
+        h3 {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
+
+    .social {
+        h1 {
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 60px;
+            margin-bottom:60px;
+            text-align: center;
+            font-weight: 400;
+            font-size: 28px;
+        }
+    }
+
+    // Careeer
+    .training {
+        h1 {
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 60px;
+            margin-bottom: 60px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+    }
+
+    .onboard {
+        text-align: center;
+
+        h1 {
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 200px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 32px;
+        }
+
+        .btn {
+            margin-top: 50px;
+            border-radius: 80px;
+            width: 200px;
+            height: 45px;
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    // Contacts
+    .contact {
+        margin-top: 50px;
+
+        p {
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            text-align: start;
+            font-weight: 400;
+            color: #808080;
+            font-size: 17px;
+        }
+    }
+
+    .message {
+        h1 {
+
+            @font-face {
+                font-family: semibold;
+                src: url('../font/hurmegeometricsans1_black-demo.html');
+            }
+
+            margin-top: 60px;
+            margin-bottom: 50px;
+            text-align: start;
+            font-weight: normal;
+            font-size: 28px;
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        .navbar-nav {
+            .nav-item {
+                a {
+
+                    @font-face {
+                        font-family: regular;
+                        src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                    }
+
+                    font-weight: normal;
+                    font-size: 14px;
+
+                    &:hover {
+                        color: #04933c;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .media-updates {
+
+        .card-media {
+            margin-top: 250px;
+
+            h4 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: 400;
+                font-size: 12px;
+                margin-top: 10px;
+
+
+            }
+
+            h3 {
+                @font-face {
+                    font-family: fontku;
+                    src: url('../font/hurmegeometricsans1_bold-webfont.woff');
+                }
+
+                font-size: 21px;
+
+                &:hover {
+                    color: #04933c;
+                }
+
+            }
+
+            p {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-weight: 300;
+                font-size: 15px;
+            }
+        }
+
+        img {
+            &:hover {
+                transform: scale(1.1);
+                transition: transform .2s ease;
+            }
+        }
+
+        .btn-viewmore {
+            h4 {
+                @font-face {
+                    font-family: regular;
+                    src: url('..//font/hurmegeometricsans1_light-webfont.woff');
+                }
+
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .card-media {
+        a {
+
+            .logo {
+                background-image: url('../images/WhatsApp_Image_2021-06-04_at_19.15.20-removebg-preview.png');
+                height: 220px;
+                background-position: 50%;
+                background-size: cover;
+                background-size: 60%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+                background-color: #e6e6e6;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: transform .2s ease;
+                }
+
+            }
+
+            .office {
+                background-image: url('../images/falaq-lazuardi-laiA0BlQt8A-unsplash.jpg');
+                height: 300px;
+                background-size: cover;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
+
+                &:hover {
+                    transform: scale(1.1);
+                    transition: transform .2s ease;
+                }
+            }
+
+            h5 {
+                @font-face {
+                    font-family: semibold;
+                    src: url('../font/hurmegeometricsans1_black-demo.html');
+                }
+
+                margin-top: 30px;
+
+            }
+
+            text-decoration: none;
+        }
+    }
+
+
+}
